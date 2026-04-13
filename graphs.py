@@ -7,15 +7,11 @@ from data import *
 # ---------------------------
 # НАСТРОЙКИ
 # ---------------------------
-ANGLE_ERROR = 1  # градусы
+ANGLE_ERROR = 1
 SAVE_DIR = "imgs"
 
 os.makedirs(SAVE_DIR, exist_ok=True)
 
-
-# ---------------------------
-# ФУНКЦИИ
-# ---------------------------
 
 def experimental_error(I):
     """Экспериментальная погрешность"""
@@ -55,12 +51,10 @@ def fresnel_reflection(theta_deg, n=1.5):
     """Френель: возвращает R_perp и R_parallel"""
     theta = np.radians(theta_deg)
 
-    # закон Снеллиуса
     sin_t = np.sin(theta) / n
     sin_t = np.clip(sin_t, -1, 1)
     theta_t = np.arcsin(sin_t)
 
-    # коэффициенты отражения
     R_perp = (np.sin(theta - theta_t) / np.sin(theta + theta_t))**2
     R_parallel = (np.tan(theta - theta_t) / np.tan(theta + theta_t))**2
 
@@ -157,9 +151,8 @@ plot_with_errors(
 
 angles_dense = np.linspace(0, 180, 500)
 
-# Без пластинки (Малюс)
 I0 = np.max(no_phase)
-phi0 = 90  # твой сдвиг
+phi0 = 90
 
 theory_no = I0 * (np.cos(np.radians(angles_dense - phi0)))**2
 
@@ -230,7 +223,6 @@ R_perp, R_parallel = fresnel_reflection(angles_dense)
 
 
 
-# масштабируем под эксперимент
 scale = np.max(bruster_max)
 
 plt.plot(
