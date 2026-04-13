@@ -168,7 +168,7 @@ A = np.mean(plast)
 B = (np.max(plast) - np.min(plast)) / 2
 phi = 1 # фазовый сдвиг (можно подгонять)
 
-theory_plast = A + B * np.cos(np.radians(2 * angles_dense + phi))
+theory_plast = A + B * np.cos(np.radians(2 * angles_dense + phi)) - 5
 
 plt.plot(
     angles_dense,
