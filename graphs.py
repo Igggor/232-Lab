@@ -70,7 +70,7 @@ def save_plot(name):
 # 1. Закон Малюса
 # ---------------------------
 plt.figure()
-plt.title("Закон Малюса")
+plt.title("Сравнение Теории и Эксперимента Закона Малюса")
 
 angles = no_phase_degrees + 90
 
