@@ -84,7 +84,7 @@ plot_with_errors(angles, no_phase, exp_err, "Эксперимент")
 plot_theory_curve(I0, angles.min(), angles.max(), "Теория")
 
 plt.xlabel("Угол (градусы)")
-plt.ylabel("Интенсивность")
+plt.ylabel("Освещённость (Лк)")
 plt.legend()
 plt.ylim(0)
 plt.grid()
@@ -115,7 +115,7 @@ plot_with_errors(
 )
 
 plt.xlabel("Угол (градусы)")
-plt.ylabel("Интенсивность")
+plt.ylabel("Освещённость (Лк)")
 plt.legend()
 plt.grid()
 
@@ -183,7 +183,7 @@ plt.plot(
 plt.xlim(0)
 plt.ylim(0)
 plt.xlabel("Угол (градусы)")
-plt.ylabel("Интенсивность")
+plt.ylabel("Освещённость (Лк)")
 plt.legend()
 plt.grid()
 
@@ -206,7 +206,7 @@ plot_with_errors(
 )
 
 plt.xlabel("Угол")
-plt.ylabel("Интенсивность")
+plt.ylabel("Освещённость (Лк)")
 plt.grid()
 
 save_plot("dark_mirror")
@@ -268,7 +268,7 @@ plt.axvline(
 # ОФОРМЛЕНИЕ
 # -------------------
 plt.xlabel("Угол падения (градусы)")
-plt.ylabel("Интенсивность")
+plt.ylabel("Освещённость (Лк)")
 plt.legend()
 plt.grid()
 
